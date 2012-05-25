@@ -1,0 +1,45 @@
+body {
+	background-color: white;
+	color: black;
+	font-size: 20px;
+	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1, th {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+	text-align: center;
+	font-size: 28px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 75%;
+}
+
+#monthly td,
+#monthly th {
+  font-family: "Lucida Grande",arial,helvetica,sans-serif;
+  font-size: 10px;
+  padding: 6px;
+  border: 1px solid #999;
+}
+
+#monthly th {
+  background: #DDD;
+  color: #666;
+  text-align: center;
+  width: 13.2857142857143%;
+}
+
+#monthly td {
+  background: #FFF;
+  color: #777;
+  height: 65px;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+

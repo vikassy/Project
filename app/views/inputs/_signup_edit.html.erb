@@ -1,0 +1,17 @@
+<%= form_for(@user) do |f| %>
+<%= f.label :name %><br />
+<%= f.text_field :name %><br />
+<%= f.label :email %><br />
+<%= f.text_field :email %><br />
+<%= f.label :password %><br />
+<%= f.password_field :password %><br />
+<%= f.label :password_confirmation %><br />
+<%= f.password_field :password_confirmation %><br />
+<% if signed_in? %> 
+<%= f.submit 'Update' %>
+<% else %>
+I Accept <%= link_to 'Terms of services' , terms_path %><%= f.check_box :terms_of_services %><br />
+<%= f.submit 'Register' %>
+<% end %>
+
+<% end %>
