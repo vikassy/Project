@@ -4,7 +4,8 @@
 
 
 <h1>Calender</h1>
-<%= select_month(Date.today)%>	
+<%= select_month Date.today %>
+<%= select_year Date.today , start_year: 2012 %>
 	<div id="cal">
 	<table id="monthly">
 			<tr>
@@ -65,4 +66,5 @@
 			</tr>
 		</div>
 		</table>
-
+<div id="result">
+</div>

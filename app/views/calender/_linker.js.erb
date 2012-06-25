@@ -1,18 +1,28 @@
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'></script>
 <script>
+var sch = new Array
+<% @cal.each do |f| %>
+  sch.push(new Array (<% f.end_time.month %>) ,<% f.end_time.month %>) , <% f.start_time.day %> , <% f.start_time.day %> , '<% f.title %>')
+<% end %>
 $(document).ready(function(){
 get_dates();
+$("#date_year").change(get_dates)
 $("#date_month").change(get_dates)
 });
 function get_dates()
 {
-// Get all the data's
   var mon = document.getElementById('date_month');
+// num_month => actual_month_in_Time.now - 1   
   var num_mon = parseInt(mon.value)-1;
-  var year = 2012;
+  var year = parseInt(document.getElementById("date_year").value);
   var day = new Date(year,num_mon,1).getDay();
-  var last_date= new Date(year,num_mon+1,0).getDate();
-// put those in claender 
+  var last_date = new Date(year,num_mon+1,0).getDate();
+//getting exact data 
+  for(i=0;i<@cal.length;i++)
+  {
+  var
+  } 
+// put those in calender 
   for (var i=0,j=1;i<35;i++)
     {	if (i<day || j>last_date){
 	$('#square'+i).html('');
@@ -22,24 +32,21 @@ function get_dates()
 	j++;
 	}	
     }
+if ($("#square35") != undefined)
+$("#square35").remove();
+if ($("#square36") != undefined)
+$("#square36").remove();
 // if date starts from Saturday !!!
   if (j<=last_date)
    {
  	$('#monthly tr:last').after('<tr><td id="square35">30&nbsp;</td></tr>');
 		j++;
    }
-   else {
-	$("#square35").remove();
- 	}
 //  if date starts from Sat and has 31 days !!!
    if (j<=last_date)
     {
  	$('#monthly tr:last').append('<td id="square36">31&nbsp;</td>');
  	j++;
     }
- 
-    else {
-	$("#square36").remove();
- 	}
 }
 </script>

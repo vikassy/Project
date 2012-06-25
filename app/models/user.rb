@@ -14,6 +14,7 @@
 class User < ActiveRecord::Base
 
   has_many :friendships , dependent: :destroy
+  has_many :calenders , dependent: :destroy
   before_save {|user| user.email = email.downcase }
   before_save :create_remember_token  
 

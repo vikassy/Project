@@ -8,7 +8,7 @@ ProjPlanner::Application.routes.draw do
   match '/signin', to: 'sessions#new'
   match '/signout',to: 'sessions#destroy', via: :delete
   match '/calender', to: 'calender#calender'
-  resources :calenders
+#  resources :calenders
   resources :users  
   resources :overviews , only: [:show]
   resources :sessions , only: [:create , :destroy , :new ]

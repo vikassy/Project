@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120516183101) do
+ActiveRecord::Schema.define(:version => 20120606153040) do
+
+  create_table "calenders", :force => true do |t|
+    t.integer  "user_id"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "title"
+    t.text     "description"
+    t.text     "personal_comment"
+  end
+
+  add_index "calenders", ["start_time"], :name => "index_calenders_on_start_time"
+  add_index "calenders", ["user_id"], :name => "index_calenders_on_user_id"
 
   create_table "friendships", :force => true do |t|
     t.boolean  "confirm"

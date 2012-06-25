@@ -1,8 +1,8 @@
 class UsersController < ApplicationController 
 
 include FriendshipHelper
-before_filter :signed_in_user? , only: [:edit , :update]
 before_filter :correct_user? , only: [:edit , :update]
+before_filter :signed_in_user? , only: [:edit , :update]
 
   def index 
     @user = User.all
@@ -75,4 +75,3 @@ private
     redirect_to root_path , notice: 'Sorry You cannot access it.' unless current_user?(@user)
   end
 end
-
