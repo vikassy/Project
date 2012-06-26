@@ -7,7 +7,7 @@ class CalenderController < ApplicationController
     else 
       @usr = User.find(params[:id])
     end
-      @cal = @usr.calender
+     # @cal = @usr.calender
   end
 
 end

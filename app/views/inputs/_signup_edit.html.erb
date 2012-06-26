@@ -7,6 +7,9 @@
 <%= f.password_field :password %><br />
 <%= f.label :password_confirmation %><br />
 <%= f.password_field :password_confirmation %><br />
+<%= f.label :avatar , 'My avatar' %><br />
+<%= f.file_field :avatar %>
+<%= f.hidden_field :avatar_cache %><br />
 <% if signed_in? %> 
 <%= f.submit 'Update' %>
 <% else %>

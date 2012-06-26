@@ -12,13 +12,15 @@
 #
 
 class User < ActiveRecord::Base
-
+#require 'carrierwave/orm/activerecord'
+  #for mounting the image of the user 
+  mount_uploader :avatar , AvatarUploader
   has_many :friendships , dependent: :destroy
   has_many :calenders , dependent: :destroy
   before_save {|user| user.email = email.downcase }
   before_save :create_remember_token  
 
-  attr_accessible :name , :email , :password , :password_confirmation , :terms_of_services  
+  attr_accessible :name , :email , :password , :password_confirmation , :terms_of_services, :avatar , :avatar_cache
   has_secure_password
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :name  , presence: true , length: {maximum: 50}

@@ -1,4 +1,9 @@
 <h1>Profile Page </h1>
+<%= image_tag(@user.avatar, alt: @user.name,:height => "50%",id: 'profile_pic') %>
+<% if current_user == @user %>
+<%= render 'image_changer.js.erb' %>
+<div id="message"></div>
+<% end %>
 <% if current_user != @user %>
 <% if friends(@user.id) %>
 <%= button_to 'Unfriend' , friendship_path(id: @user.id) , method: :delete %>
