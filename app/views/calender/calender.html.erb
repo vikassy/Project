@@ -1,12 +1,10 @@
-<%= render 'linker.js.erb' %>
-<%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "application" %>
-<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
-
-
 <h1>Calender</h1>
-<%= select_month Date.today %>
-<%= select_year Date.today , start_year: 2012 %>
-	<div id="cal">
+<%= form_tag({:action => 'calender'} , :id => "sub_cal" , method: 'get' , remote: true ) do %>
+<%= select_month @month.to_i %>
+<%= select_year @year.to_i , options = {start_year: 2012} %>
+<% end %>
+<div id="linker"><%= render 'linker.js' %></div>
+<div id="cal">
 	<table id="monthly">
 			<tr>
 				<th>Sunday</th>
@@ -64,7 +62,7 @@
 				<td id='square33'>&nbsp;</td>
 				<td id='square34'>&nbsp;</td>
 			</tr>
-		</div>
 		</table>
-<div id="result">
-</div>
+	</div>
+
+<div id="pass"><%= params %></div>

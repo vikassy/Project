@@ -1,0 +1,4 @@
+<%= form_tag({:action => 'calender'} ,:name => nil , :id => "sub_cal" , method: 'get' ) do %>
+<%= select_month @month.to_i %>
+<%= select_year @year.to_i , options = {start_year: 2012} %>
+<% end %>

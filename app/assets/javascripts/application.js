@@ -12,4 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require_tree . 
+$(document).ready(function  () {
+	//alert('h')
+	$('#date_month').live('change',function(){
+		//alert('hello');
+		$('#sub_cal').submit();
+	});
+	$('#date_year').live('change',function(){
+		//alert('hello');
+			$('#sub_cal').submit();
+	});
+	//this is to make a submit call
+	$('#sub_cal').bind('submit',function  () {
+		$.get($('#sub_cal').action , $(this).serialize() , null , 'script')
+		get_dates();	
+			return false;
+		});
+});
