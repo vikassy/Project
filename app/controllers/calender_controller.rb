@@ -23,7 +23,7 @@ class CalenderController < ApplicationController
   end
 
   def day
-  	@title = 'Day |'+params[:id]
+  	@title = 'Day |'
   end
 
 end

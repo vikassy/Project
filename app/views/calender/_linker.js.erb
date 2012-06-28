@@ -14,17 +14,21 @@ function get_dates()
   var last_date = new Date(year,num_mon+1,0).getDate();
 //getting exact data 
 // put those in calender 
+  //var i=0
+  //var j=1
+  <% j = 1 %>
   for (var i=0,j=1;i<35;i++)
-    {	if (i<day || j>last_date)
+    //{	
+      if (i<day || j>last_date)
       {
 	       $('#square'+i).html('');
-	     }
+      }
       else
       {
-	       $('#square'+i).html(j);
-	       j++;
+	       $('#square'+i).html('<a href=/day?date='+j+'&amp;month='+(num_mon+1)+'&amp;year='+year+'>'+j+'</a>');
+         j++;
 	     }	
-    }
+    //}
 if ($("#square35") != undefined)
 $("#square35").remove();
 if ($("#square36") != undefined)
@@ -32,13 +36,13 @@ $("#square36").remove();
 // if date starts from Saturday !!!
   if (j<=last_date)
    {
- 	$('#monthly tr:last').after('<tr><td id="square35">30&nbsp;</td></tr>');
+ 	$('#monthly tr:last').after('<tr><td id="square35"><a href=/day?date='+j+'&amp;month='+(num_mon+1)+'&amp;year='+year+'>'+j+'</a>&nbsp;</td></tr>');
 		j++;
    }
 //  if date starts from Sat and has 31 days !!!
    if (j<=last_date)
     {
- 	$('#monthly tr:last').append('<td id="square36">31&nbsp;</td>');
+ 	$('#monthly tr:last').append('<td id="square36"><a href=/day?date='+j+'&amp;month='+(num_mon+1)+'&amp;year='+year+'>'+j+'</a>&nbsp;</td>');
  	j++;
     }
 }
