@@ -1,0 +1,10 @@
+<h1>Make new group </h1>
+<%= form_for @grps do |f| %>
+	<%= f.label :name %><br />
+	<%= f.text_field :name %><br />
+	<%= f.label :description %><br />
+	<%= f.text_area :description %><br />
+	Private<%= f.radio_button :avail , true %><br />
+	Public<%= f.radio_button :avail ,  false %><br />
+	<%= f.submit 'Create group' %>
+	<% end %>

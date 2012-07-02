@@ -10,6 +10,7 @@ ProjPlanner::Application.routes.draw do
   match '/calender', to: 'calender#calender'
   match '/day',to: 'calender#day'
 #  resources :calenders
+  resources :groups
   resources :users  
   resources :overviews , only: [:show]
   resources :sessions , only: [:create , :destroy , :new ]
