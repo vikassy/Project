@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120628113900) do
+ActiveRecord::Schema.define(:version => 20120704012859) do
 
   create_table "calenders", :force => true do |t|
     t.integer  "user_id"
@@ -48,6 +48,9 @@ ActiveRecord::Schema.define(:version => 20120628113900) do
     t.text     "user_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "gavatar"
+    t.text     "invitation"
+    t.text     "accepted"
   end
 
   create_table "users", :force => true do |t|
