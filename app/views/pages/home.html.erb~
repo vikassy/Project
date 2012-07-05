@@ -6,7 +6,7 @@ Plannerace
 <link type="text/css" rel="stylesheet" href="Home/Project/app/assets/stylesheets/pages.css.scss">
 </head>
 <body>
-<image class="main" src="Home/Project/app/assets/images/box-logo.jpg">
+<image class="main" src="box-logo.jpg">
 
 
 
