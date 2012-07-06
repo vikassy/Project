@@ -1,20 +1,20 @@
 <%= form_for(@user) do |f| %>
-<%= f.label :name %><br />
-<%= f.text_field :name %><br />
-<%= f.label :email %><br />
-<%= f.text_field :email %><br />
-<%= f.label :password %><br />
-<%= f.password_field :password %><br />
-<%= f.label :password_confirmation %><br />
-<%= f.password_field :password_confirmation %><br />
-<%= f.label :avatar , 'My avatar' %><br />
-<%= f.file_field :avatar %>
+<%= f.label :name, class:'input_label'%><br />
+<%= f.text_field :name, class:'input-box' %><br />
+<%= f.label :email, class:'input_label'%><br />
+<%= f.text_field :email, class:'input-box'%><br />
+<%= f.label :password, class:'input_label' %><br />
+<%= f.password_field :password, class:'input-box' %><br />
+<%= f.label :password_confirmation, class:'input_label' %><br />
+<%= f.password_field :password_confirmation, class:'input-box' %><br />
+<%= f.label :avatar , 'My avatar',class:'input_label' %><br />
+<%= f.file_field :avatar, class:'input-box' %><br />
 <%= f.hidden_field :avatar_cache %><br />
 <% if signed_in? %> 
 <%= f.submit 'Update' %>
 <% else %>
-I Accept <%= link_to 'Terms of services' , terms_path %><%= f.check_box :terms_of_services %><br />
-<%= f.submit 'Register' %>
+<span class='input_label'>I Accept</span> <%= link_to 'Terms of services' , terms_path %><%= f.check_box :terms_of_services %><br />
+<%= f.submit 'Register' , class:'input-box' %>
 <% end %>
 
 <% end %>
