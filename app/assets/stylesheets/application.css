@@ -26,3 +26,16 @@ right: 150px;
 top: 0px;
 z-index: 2;
 }
+
+.input_label
+{
+margin-left: 400px;
+color:white;
+font-size: 30px;
+}
+
+.input-box
+{
+margin-left: 400px;
+font-size: 20px;
+}
