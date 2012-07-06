@@ -1,8 +1,10 @@
 <h1>My overview Page </h1>
 <h4><%= @user.name %></h4><br />
 <h4><%= @user.email %></h4><br />
+<h3>Group Invitation</h3>
+
 <% if friend_request_any? %>
-<h3>Friend Requests </h3>
+<h3>Friend Requests</h3>
 <% @requests.each do |f| %>
 <%= link_to (get_name(f.viewer_id)).name , get_name(f.viewer_id) %>
 <%= button_to 'Accept' , friendship_path(id: (get_name(f.viewer_id)).id) , method: 'put' %>

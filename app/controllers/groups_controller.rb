@@ -21,6 +21,10 @@ class GroupsController < ApplicationController
 			render 'new'
 		end
 	end
+
+	def show
+		@grps = Group.find(params[:id])
+	end
 	
 	
 end

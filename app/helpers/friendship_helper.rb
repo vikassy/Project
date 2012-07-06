@@ -30,15 +30,27 @@ module FriendshipHelper
   end
 
   def find_friends(id)
-    n = Hash.new
-    i = Array.new
+    @actual = Array.new
+    inf = Array.new
     f = Friendship.where(user_id: id, confirm: true )
-    i << f.viewer_id
-    g = Friendship.where(viewer_id: id, confirm: true )      
-    i << g.user_id
-    i.each do |k|
-      n << ['id' => k , 'name' => User.find(k).name]
+    if !f.empty?
+      f.each do |k|
+        inf << k.viewer_id
+      end
     end
+    g = Friendship.where(viewer_id: id, confirm: true )      
+    if !g.empty?
+      g.each do |k|
+        inf << k.user_id
+      end
+    end
+    inf.each do |k|
+      num = Hash.new
+      num['id']= k
+      num['name'] = User.find(k).name
+      @actual << num
+    end
+    return @actual
   end
 
 

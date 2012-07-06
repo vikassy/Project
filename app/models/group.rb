@@ -2,6 +2,7 @@ class Group < ActiveRecord::Base
 	before_save :invitation_tokens
 	serialize :user_id , Array
 	serialize :accepted , Array
+	serialize :invitation , Array
 	attr_accessible :name , :description , :avail , :invitation_tokens , :invitation 
 	attr_reader :invitation_tokens
 
@@ -11,7 +12,9 @@ class Group < ActiveRecord::Base
 	validates :avail , inclusion: {in: [true,false] }
 
 	def invitation_tokens=(ids)
-		self.invitation = ids.split(",")
+		arr = Array.new
+		arr = ids.split(",").map {|s| s.to_i}
+		self.invitation = arr.uniq
 	end
 
 end
