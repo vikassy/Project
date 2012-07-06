@@ -7,18 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to 'Home' , root_path %>
-<%= link_to 'About', about_path %>
-<%= link_to 'Help' , help_path %>
+<ul>
+<li><%= link_to 'Home' , root_path,class:'knil' %><li>
+<li><%= link_to 'About', about_path , class:'knil'%></li>
+<li><%= link_to 'Help' , help_path, class:'knil' %></li>
+
 <% if signed_in? %>
-<%= link_to 'My Profile' , user_path(current_user) %>
-<%= link_to 'Personalize' ,edit_user_path(current_user) %>
-<%= link_to 'Sign out', signout_path , method: 'delete' %>
-<%= link_to 'My overview' , overview_path(current_user) %>
-<%= link_to 'All Users' , all_users_path %>
+<li><%= link_to 'My Profile' , user_path(current_user) , class:'knil'%></li>
+<li><%= link_to 'Personalize' ,edit_user_path(current_user) , class:'knil' %></li>
+<li><%= link_to 'Sign out', signout_path , method: 'delete' , class:'knil' %></li>
+<li><%= link_to 'My overview' , overview_path(current_user), class:'knil' %></li>
+<li><%= link_to 'All Users' , all_users_path , class:'knil' %></li>
 <% else %>
-<%= link_to 'Sign up', signup_path %>
-<%= link_to 'Sign in', signin_path %><br />
+<li><%= link_to 'Sign up', signup_path , class:'knil' %></li>
+<li><%= link_to 'Sign in', signin_path , class:'knil' %></li><br />
+</ul>
 <% end %>
 <% flash.each do |value , message | %>
 <%= message %>
