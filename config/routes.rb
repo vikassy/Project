@@ -1,4 +1,4 @@
-ProjPlanner::Application.routes.draw do
+ProjPlanner::Application.routes.draw do 
 # match ':controller(/:action(/:id))(.:format)'
   match '/about' , to: 'pages#about'
   match '/help'  , to: 'pages#help'
@@ -9,12 +9,14 @@ ProjPlanner::Application.routes.draw do
   match '/signout',to: 'sessions#destroy', via: :delete
   match '/calender', to: 'calender#calender'
   match '/day',to: 'calender#day'
+  get 'genpars/friends'
 #  resources :calenders
   resources :groups
   resources :users  
   resources :overviews , only: [:show]
   resources :sessions , only: [:create , :destroy , :new ]
   resources :friendships , only: [:create , :destroy , :update]
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

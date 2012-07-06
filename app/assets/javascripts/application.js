@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require_tree . 
 $(document).ready(function  () {
+	$('#group_invitation_tkens').tokenInput('genpars/friends.jsonsd',{crossDomain: false});
 	//alert('h')
 	$('#date_month').live('change',function(){
 		//alert('hello');
