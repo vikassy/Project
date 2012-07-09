@@ -1,0 +1,12 @@
+<% if is_invited(@grps.id,current_user.id) %>
+<h1><%= @grps.name %></h1>
+<h2><%= @grps.description %></h2>
+You have been invited to join this group 
+<%= button_to 'Accept' , group_path(id: @grps.id) , method: 'put' %><%= button_to 'Decline' , group_path(id: @grps.id) , method: :delete %>
+<% elsif is_member(@grps.id,current_user.id) %>
+
+<h1><%= @grps.name %></h1>
+<h2><%= @grps.description %></h2>
+Other important stuff and links pertaing to the group !!
+
+<% end %>

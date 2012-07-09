@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require_tree . 
 $(document).ready(function  () {
+	$('#group_invitation_tokens').tokenInput('/genpars/friends.json');
 	//alert('h')
 	$('#date_month').live('change',function(){
 		//alert('hello');
