@@ -3,6 +3,7 @@ class Group < ActiveRecord::Base
 	serialize :user_id , Array
 	serialize :accepted , Array
 	serialize :invitation , Array
+	serialize :accepted , Array
 	attr_accessible :name , :description , :avail , :invitation_tokens , :invitation 
 	attr_reader :invitation_tokens
 

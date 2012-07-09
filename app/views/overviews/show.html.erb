@@ -1,8 +1,13 @@
 <h1>My overview Page </h1>
 <h4><%= @user.name %></h4><br />
 <h4><%= @user.email %></h4><br />
+<% if !@grps.empty? %>
 <h3>Group Invitation</h3>
-
+<% @grps.each do |f| %>
+<%= link_to f.name , f %><br />
+<%= button_to 'Accept' , group_path(id: f.id) , method: 'put' %><%= button_to 'Decline' , group_path(id: f.id) , method: :delete %>
+<% end %>
+<% end %>	
 <% if friend_request_any? %>
 <h3>Friend Requests</h3>
 <% @requests.each do |f| %>
