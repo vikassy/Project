@@ -1,3 +1,4 @@
+<div class= "xob">
 <%= form_for(@user) do |f| %>
 <%= f.label :name, class:'input_label'%><br />
 <%= f.text_field :name, class:'input-box' %><br />
@@ -15,6 +16,7 @@
 <% else %>
 <span class='input_label'>I Accept</span> <%= link_to 'Terms of services' , terms_path %><%= f.check_box :terms_of_services %><br />
 <%= f.submit 'Register' , class:'input-box' %>
+</div>
 <% end %>
 
 <% end %>
