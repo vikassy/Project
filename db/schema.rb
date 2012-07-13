@@ -11,11 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< .merge_file_1EYDbB
-ActiveRecord::Schema.define(:version => 20120629085133) do
-=======
-ActiveRecord::Schema.define(:version => 20120704012859) do
->>>>>>> .merge_file_UeCHyw
+ActiveRecord::Schema.define(:version => 20120713054526) do
 
   create_table "calenders", :force => true do |t|
     t.integer  "user_id"
@@ -30,6 +26,16 @@ ActiveRecord::Schema.define(:version => 20120704012859) do
 
   add_index "calenders", ["start_time"], :name => "index_calenders_on_start_time"
   add_index "calenders", ["user_id"], :name => "index_calenders_on_user_id"
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.boolean  "type"
+    t.text     "admins_id"
+    t.text     "venue"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "friendships", :force => true do |t|
     t.boolean  "confirm"
@@ -53,11 +59,8 @@ ActiveRecord::Schema.define(:version => 20120704012859) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "gavatar"
-<<<<<<< .merge_file_1EYDbB
-=======
     t.text     "invitation"
     t.text     "accepted"
->>>>>>> .merge_file_UeCHyw
   end
 
   create_table "users", :force => true do |t|
