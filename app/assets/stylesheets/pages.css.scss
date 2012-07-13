@@ -9,53 +9,64 @@ position: relative;
 background-color: #28d53f;
 z-index: 1;
 }
+
 .main 
 {
+height: 300px;
+width: 500px;
 position: absolute;
-width: 900px;
-height: 650px;
-left: 200px;
+left: 380px;
 right: 150px;
-top: 60px;
+top: 150px;
 }
 
 .knil
 {
-background-color: white;
+background-color: #F0FEEC;
 font-style: bold;
 margin-left: 10px;
 text-font: Comic Sans;
 text-decoration: none;
-color: #28d53f;
+color: #176F00;
 font-size: 30px;
 z-index: 3;
+-webkit-transition: 0.3s ease;
+-moz-transition: 0.3s ease;
+-o-transition: 0.3s ease;
+-ms-transition: 0.3s ease;
+transition: 0.3s ease;
 }
 
 .knil:hover
 {
-border: solid;
 text-decoration: none;
-border: solid,5px,white;
+border: solid 2px;
+
+border-color: #46A12F;
+border-radius: 15px;
 padding:10px;
-font-size: 35px;
+font-size: 30px;
 margin:5px;
 background-color:#28d53f;
-color:white;
+color: #F0FEEC;
 }
 .knil:active
 {
-border: solid;
 text-decoration: none;
-border: solid,5px,white;
-padding:10px;
-font-size: 25px;
+border: solid,5px;
+border-color: #46A12F;
+padding:5px;
+font-size: 30px;
 margin:5px;
 background-color:#28d53f;
 color:white;
 }
 ul
 {
-background-color: white;
+border: solid 2px;
+border-color: #46A12F;
+border-radius: 15px;
+background-color: #F0FEEC;
 list-style-type:none;
 margin:20px;
 padding-left:20px;
@@ -63,4 +74,15 @@ padding-left:20px;
 li
 {
 display:inline;
+}
+.xob
+{
+background-color: #F0FEEC;
+margin-left: 50px;
+width: 1117px; 
+border: solid 2px;
+border-color: #46A12F;
+border-radius: 15px;
+z-index:3;
+padding: 30px;
 }

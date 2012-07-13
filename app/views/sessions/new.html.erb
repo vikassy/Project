@@ -1,8 +1,10 @@
+<div class= "xob">
 <h1>Sign in </h1>
 <%= form_for(:sessions , url: sessions_path) do |f| %>
-<%= f.label :email %><br />
-<%= f.text_field :email %><br />
-<%= f.label :password %><br />
-<%= f.password_field :password %><br />
-<%= f.submit 'Sign in' %>
+<%= f.label :email, class: 'input_label'%><br />
+<%= f.text_field :email, class:'input-box' %><br />
+<%= f.label :password, class:'input_label' %><br />
+<%= f.password_field :password, class:'input-box' %><br /><br>
+<%= f.submit 'Sign in', class:'input-box' %>
 <% end %>
+</div>
