@@ -32,10 +32,16 @@ z-index: 5;
 }
 
 #signin_home{
+border: solid 2px;
+border-color: #46A12F;
+border-radius: 15px;
+z-index: 3;
+padding: 30px;
+background-color: #F0FEEC;
 height: 300px;
 width: 500px;
 position: absolute;
-left: 600px;
+left: 700px;
 right: 100px;
 top: 150px;
 border-radius: 15px;
