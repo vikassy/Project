@@ -16,7 +16,7 @@ width: 5px;
 position: absolute;
 left: 20px;
 right: 100px;
-top: 200px;
+top: 300px;
 margin-left: 10px;
 z-index: 5;
 }
@@ -26,7 +26,7 @@ width: 5px;
 position: absolute;
 left: 500px;
 right: 100px;
-top: 200px;
+top: 300px;
 margin-left: 10px;
 z-index: 5;	
 }
@@ -37,7 +37,7 @@ width: 500px;
 position: absolute;
 left: 600px;
 right: 100px;
-top: 100px;
+top: 150px;
 border-radius: 15px;
 }
 .main 
@@ -47,7 +47,7 @@ width: 500px;
 position: absolute;
 left: 50px;
 right: 100px;
-top: 50px;
+top: 110px;
 border-radius: 15px;
 }
 
@@ -113,13 +113,10 @@ display:inline;
 .below_nav, .xob
 {
 background-color: #F0FEEC;
-<<<<<<< HEAD
 position: absolute;
 left: 0px;
-=======
 position: relative;
 left: 30px;
->>>>>>> 4abc35cfaee07043fef8aa832212c2f1ccc58317
 right: 100px;
 top: 50px;
 margin-left: 10px;
@@ -133,6 +130,7 @@ padding: 30px;
 
 .pot
 {
+background-color: #F0FEEC;
 margin-left: 35px;
 height: 50px;
 }
