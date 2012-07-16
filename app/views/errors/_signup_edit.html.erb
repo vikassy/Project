@@ -1,5 +1,5 @@
-<div class= "xob">
 <% if @user.errors.any? %>
+<div class= "xob">
 <% @user.errors.full_messages.each do |e| %>
 <% if !(/Password digest/.match(e)) %>
 <%= e %><br />

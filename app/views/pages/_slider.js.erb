@@ -1,0 +1,30 @@
+<script type='text/javascript'>
+var a =  <%= @all_images %>;
+var i=0;
+function previous(){
+//document.images[0].src = "assets/"+a[2];
+i--;
+if (i == -1)
+{
+i= a.length-1;
+document.images[0].src = "assets/"+a[i]; 
+}
+else {
+document.images[0].src = "assets/"+a[i];
+}
+return false;
+}
+
+function next() {
+i++;
+if (i == a.length)
+{
+i=0;
+document.images[0].src = "assets/"+a[i]; 
+}
+else {
+document.images[0].src = "assets/"+a[i];
+}
+return false;
+}
+</script>

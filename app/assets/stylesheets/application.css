@@ -20,11 +20,13 @@ z-index: 1;
 }
 .main 
 {
+height: 300px;
+width: 500px;
 position: absolute;
-left: 150px;
-right: 150px;
-top: 0px;
-z-index: 2;
+left: 700px;
+right: 100px;
+top: 50px;
+border-radius: 15px;
 }
 
 .input_label

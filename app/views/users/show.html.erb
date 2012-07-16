@@ -1,23 +1,23 @@
+
 <h1>Profile Page </h1>
-<%= image_tag(@user.avatar, alt: @user.name,:height => "50%",id: 'profile_pic') %>
+<%= image_tag(@user.avatar, alt: @user.name,:height => "50%", id: 'profile_pic') %>
 <% if current_user == @user %>
 <%= render 'image_changer.js.erb' %>
 <div id="message"></div>
-<% end %>
-<% if current_user != @user %>
-<% if friends(@user.id) %>
-<%= button_to 'Unfriend' , friendship_path(id: @user.id) , method: :delete %>
-<% elsif request_sent_accept_friend(@user.id)  %>
-<%= button_to 'Accept' , friendship_path(id: @user.id) , method: 'put' %>
-<%= button_to 'Decline' , friendship_path(id: @user.id) , method: :delete %>
-<% elsif request_sent(@user.id) %>
-Friend Request Sent
 <% else %>
-<%= button_to 'Send friend Request' , friendships_path(id: @user.id) %>
+	<% if friends(@user.id) %>
+	<%= button_to 'Unfriend' , friendship_path(id: @user.id) , method: :delete %>
+	<% elsif request_sent_accept_friend(@user.id)  %>
+	<%= button_to 'Accept' , friendship_path(id: @user.id) , method: 'put' %>
+	<%= button_to 'Decline' , friendship_path(id: @user.id) , method: :delete %>
+	<% elsif request_sent(@user.id) %>
+	Friend Request Sent
+	<% else %>
+	<%= button_to 'Send friend Request' , friendships_path(id: @user.id) %>
+	<% end %>
 <% end %>
-<% end %>
-<h3>Friends (<%= @h.size %>) </h3>
-<% if ! @h.empty? %>
+<h3>Friends (<%= @h.size %>)</h3>
+<% if !@h.empty? %>
 <% @h.each do |f| %>
 <%= link_to (User.find(f)).name , (User.find(f)) %><br />
 <% if current_user == @user %>
