@@ -14,7 +14,7 @@ z-index: 1;
 {
 width: 5px;
 position: absolute;
-left: 550px;
+left: 20px;
 right: 100px;
 top: 200px;
 margin-left: 10px;
@@ -24,19 +24,28 @@ z-index: 5;
 {
 width: 5px;
 position: absolute;
-left: 1050px;
+left: 500px;
 right: 100px;
 top: 200px;
 margin-left: 10px;
 z-index: 5;	
 }
 
+#signin_home{
+height: 300px;
+width: 500px;
+position: absolute;
+left: 600px;
+right: 100px;
+top: 100px;
+border-radius: 15px;
+}
 .main 
 {
 height: 300px;
 width: 500px;
 position: absolute;
-left: 600px;
+left: 50px;
 right: 100px;
 top: 50px;
 border-radius: 15px;
@@ -101,7 +110,7 @@ display:inline;
 {
 background-color: #F0FEEC;
 position: absolute;
-left: 10px;
+left: 0px;
 right: 100px;
 top: 50px;
 margin-left: 10px;
