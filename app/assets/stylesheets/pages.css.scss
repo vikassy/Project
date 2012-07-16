@@ -10,6 +10,7 @@ background-color: #28d53f;
 z-index: 1;
 }
 
+
 #previous
 {
 width: 5px;
@@ -46,10 +47,42 @@ right: 100px;
 top: 150px;
 border-radius: 15px;
 }
+
+#slider_link1{
+display: inline;
+position: absolute;
+left: 200px;
+right: 100px;
+top: 475px;
+}
+#slider_link2{
+display: inline;
+position: absolute;
+left: 250px;
+right: 100px;
+top: 475px;
+}
+#slider_link3{
+display: inline;
+position: absolute;
+left: 300px;
+right: 100px;
+top: 475px;
+}
+
+#slider_link4{
+display: inline;
+position: absolute;
+left: 350px;
+right: 100px;
+top: 475px;
+}
+
+
 .main 
 {
-height: 300px;
-width: 500px;
+height: 400px;
+width: 600px;
 position: absolute;
 left: 50px;
 right: 100px;

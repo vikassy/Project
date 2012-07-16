@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require_tree . 
 $(document).ready(function  () {
+var count = 0
+	setInterval("slider()",3000);
 	$('#group_invitation_tokens').tokenInput('/genpars/friends.json');
 	//alert('h')
 	$('#date_month').live('change',function(){
@@ -30,4 +32,20 @@ $(document).ready(function  () {
 		get_dates();	
 			return false;
 		});
+	$("#slider_link1").click(function(){
+		 play(0)
+		 return false;
+	});
+	$('#slider_link2').click(function(){
+		 play(1)
+		 return false;
+	});
+	$('#slider_link3').click(function(){
+		play(2)
+		return false;
+	});
+	$('#slider_link4').click(function(){
+		play(3);
+		return false;
+	});
 });

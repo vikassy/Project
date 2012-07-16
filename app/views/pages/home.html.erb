@@ -1,11 +1,17 @@
-<div class="edils">
+<div id="edils">
 <%= render 'slider.js.erb' %>
-<%= link_to 'Previous Image slide here' ,'#' , {id: 'previous' , onclck: "previous();" }%>
 <%= image_tag 'box-logo.jpg' , class: 'main' %>
-<%= link_to 'Next Image slide' , '#' , id: 'next' %>
 </div>
 <div id='signin_home'>
 <%= render 'inputs/signin' %>
+<<<<<<< HEAD
 
 <p class="input_label_notaplanner">Not a Planner? .. Join now</p><%= button_to'Sign Up' , signup_path, class: "nottub" %>
+=======
+<h3>Not a Planner , Be one now</h3><%= link_to 'Sign Up' , signup_path , class: 'here' %>
+>>>>>>> upstream/master
 </div>
+<%= link_to '1', '#' , id:'slider_link1'  %>
+<%= link_to '2', '#' , id:'slider_link2'  %>
+<%= link_to '3', '#' , id:'slider_link3'  %>
+<%= link_to '4', '#' , id:'slider_link4'  %>
