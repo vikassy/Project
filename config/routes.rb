@@ -12,6 +12,7 @@ ProjPlanner::Application.routes.draw do
   get 'genpars/friends'
 #  resources :calenders
   resources :groups
+  resources :events
   resources :users  
   resources :overviews , only: [:show]
   resources :sessions , only: [:create , :destroy , :new ]

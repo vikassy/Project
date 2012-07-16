@@ -1,6 +1,12 @@
 class GroupsController < ApplicationController
 	
   include	FriendshipHelper
+  include GroupsHelper
+
+  def index
+  	@grps = Group.where(avail: false)
+  	@groups = find_all_groups
+  end
 
 	def new
 		@users = User.all
