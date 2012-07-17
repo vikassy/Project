@@ -8,10 +8,12 @@ count++;
 if (count == l) 
 count = 0 
 play(count);
+//$('#edils').fadeIn('slow');
 }
 
 function play(num) {
 	count = num;
+	$('#edils').fadeOut('slow');
 	$('#edils').html(basic_link+img[num]+'"'+' />')
 }
 
