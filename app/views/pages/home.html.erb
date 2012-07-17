@@ -1,4 +1,4 @@
-<div id="edils">
+<div id="edils" class="edils">
 <%= render 'slider.js.erb' %>
 <%= image_tag 'box-logo.jpg' , class: 'main' %>
 </div>
@@ -11,7 +11,9 @@
 <h3>Not a Planner , Be one now</h3><%= link_to 'Sign Up' , signup_path , class: 'here' %>
 >>>>>>> upstream/master
 </div>
-<%= link_to '1', '#' , id:'slider_link1'  %>
-<%= link_to '2', '#' , id:'slider_link2'  %>
-<%= link_to '3', '#' , id:'slider_link3'  %>
-<%= link_to '4', '#' , id:'slider_link4'  %>
+<ul class="dot_list">
+<li><%= link_to '1', '#' , id:'slider_link1' , class: 'stod' %></li>
+<li><%= link_to '2', '#' , id:'slider_link2' , class: 'stod' %></li>
+<li><%= link_to '3', '#' , id:'slider_link3' , class: 'stod' %></li>
+<li><%= link_to '4', '#' , id:'slider_link4' , class: 'stod' %></li>
+</ul>

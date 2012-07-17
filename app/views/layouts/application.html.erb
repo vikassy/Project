@@ -10,7 +10,7 @@
 <%= image_tag 'logo.jpg', class: "pot"%>
 <%= image_tag 'plannerace.jpg', class: "pot"%>
 <% if signed_in? %>
-<ul>
+<ul class='nav_bar'>
 <li><%= link_to 'Home' , root_path ,class:'knil' %></li>
 <li><%= link_to 'My Profile' , user_path(current_user) , class:'knil'%></li>
 <li><%= link_to 'Personalize' ,edit_user_path(current_user) , class:'knil' %></li>
@@ -19,13 +19,14 @@
 
 </ul>
 <% else %>
-<ul>
+<ul class='nav_bar'>
 <li><%= link_to 'Home' , root_path ,class:'knil' %></li>
 <li><%= link_to 'About', about_path , class:'knil'%></li>
 <li><%= link_to 'Help' , help_path, class:'knil' %></li>
 <li><%= link_to 'Sign up', signup_path , class:'knil' %></li>
 <li><%= link_to 'Sign in', signin_path , class:'knil' %></li>
 </ul>
+
 <% end %>
 <% flash.each do |value , message| %>
 <%= message %>
@@ -37,5 +38,17 @@
 <% else %>
 <%= yield %>
 <% end %>
+<div class="push"></div>
+        </div>
+<div class="retoof">
+	<h1>WWW.plannerace.com</h1>
+	<ul>
+	<li><%= link_to 'Terms', root_path, class: "footer_link" %></li>
+	<li><%= link_to 'About', about_path, class: "footer_link" %></li>
+	<li><%= link_to 'Jobs', help_path, class: "footer_link" %></li>
+	<li><%= link_to 'License', signup_path, class: "footer_link" %></li> 
+	</ul>
+</div>
+
 </body>
 </html>
