@@ -15,7 +15,7 @@
 //= require_tree . 
 $(document).ready(function  () {
 var count = 0
-	setInterval("slider()",3000);
+
 	$('#group_invitation_tokens').tokenInput('/genpars/friends.json');
 	//alert('h')
 	$('#date_month').live('change',function(){

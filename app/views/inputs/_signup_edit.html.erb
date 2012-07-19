@@ -17,8 +17,7 @@
 <%= f.submit 'Update' , class:'input-box'%>
 <% else %>
 <span class='input_label'>I Accept</span> <%= link_to 'Terms of services' , terms_path %><%= f.check_box :terms_of_services %><br />
-<%= f.submit 'Sign Up' , class:'input-box' %>
-</div>
+<%= f.submit 'Sign Up' , class:'input-submit' %>
 <% end %>
 
 <% end %>
