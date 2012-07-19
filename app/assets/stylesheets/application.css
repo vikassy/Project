@@ -51,7 +51,7 @@ font-size: 30px;
 
 .input_label_notaplanner
 {
-margin-left: 20px;
+margin-left: 120px;
 color:#176F00;
 font-size: 20px;
 }
@@ -88,6 +88,35 @@ font-size: 20px;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0c8a00', endColorstr='#54c44e');
 	background-color:#0c8a00;
 }.nottub:active {
+	position:relative;
+	top:1px;
+}
+
+.nottub_sign_up {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #54c44e), color-stop(1, #0c8a00) );
+	background:-moz-linear-gradient( center top, #54c44e 5%, #0c8a00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#54c44e', endColorstr='#0c8a00');
+	background-color:#54c44e;
+	moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	margin-left: 190px;
+	color:#f0f0f0;
+	font-family:Arial;
+	font-size:19px;
+	font-weight:normal;
+	padding:6px 24px;
+	text-decoration:none;
+}.nottub_sign_up:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0c8a00), color-stop(1, #54c44e) );
+	background:-moz-linear-gradient( center top, #0c8a00 5%, #54c44e 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0c8a00', endColorstr='#54c44e');
+	background-color:#0c8a00;
+}.nottub_sign_up:active {
 	position:relative;
 	top:1px;
 }
