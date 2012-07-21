@@ -30,12 +30,21 @@ module EventsHelper
 
 	def accepted_mem(evnt_id,mem_id)		
 		@evnt = Event.find(evnt_id)
-		@evnt.invitation.delete(mem_id)
-		if @evnt.accepted.empty?
-			@evnt.accepted = [mem_id]
-		else
-			@evnt.accepted << mem_id
+		if @evnt.invitation.delete(mem_id)
+			if @evnt.accepted.nil? or @evnt.accepted.empty? 
+				@evnt.accepted = [mem_id]
+			else
+				@evnt.accepted << mem_id
+			end
 		end
+		@evnt.save
 	end
 
+	def is_invited(evnt_id,usr_id)
+		return Event.find(evnt_id).invitation.include?(usr_id)	
+	end
+
+	def is_member(evnt_id,usr_id)
+		return Event.find(evnt_id).accepted.include?(usr_id)
+	end
 end

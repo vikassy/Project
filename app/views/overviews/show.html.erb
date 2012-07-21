@@ -5,7 +5,7 @@
 <h3>Events Invitation</h3>
 <% @evnts.each do |f| %>
 <%= link_to f.name , f %>
-<%= button_to 'Accept' , event_path(evnt_id: f.id) , method: 'put' %><%= button_to 'Decline' , event_path(evnt_id: f.id) , method: :delete %><br />
+<%= button_to 'Accept' , event_path(id: f.id) , method: 'put' %><%= button_to 'Decline' , event_path(id: f.id) , method: :delete %><br />
 <% end %>
 <% end %>
 <% if !@grps.empty? %>

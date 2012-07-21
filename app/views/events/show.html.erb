@@ -1,2 +1,8 @@
-<br /><%= @event.name %>
-<br /><%= @event.description %>
+<h1><%= @event.name %></h1>
+<h2><%= @event.description %></h2>
+<% if is_invited(@event.id,current_user.id) %>
+You have been invited to join this group 
+<%= button_to 'Accept' , event_path(id: f.id) , method: 'put' %><%= button_to 'Decline' , event_path(id: f.id) , method: :delete %><br />
+<% elsif is_member(@event.id,current_user.id) %>
+Other important stuff and links pertaing to the group !!
+<% end %>

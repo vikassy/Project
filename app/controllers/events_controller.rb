@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 	
-	include GroupsHelper
+	#include GroupsHelper
 	include EventsHelper
 
 	def index 
@@ -31,13 +31,14 @@ class EventsController < ApplicationController
 	end
 	
 	def update
+		evnt_id = params[:id].to_i
 		#Make a note to check weather current_user is admin of group_id
-		if params[:grp_id] and is_admin?(params[:grp_id].to_i,current_user.id) and grp_is_invited?(params[:grp_id].to_i,params[:evnt_id].to_i)
+		if params[:grp_id] and is_admin?(params[:grp_id].to_i,current_user.id) and grp_is_invited?(params[:grp_id].to_i,evnt_id)
 			accepted_grp(params[:grp_id].to_i)
 		else
-			accepted_mem(params[:evnt_id].to_i,current_user.id)
+			accepted_mem(evnt_id,current_user.id)
 		end
-		redirect_to Event.find(params[:evnt_id])
+		redirect_to Event.find(evnt_id)
 	end
 
 	
