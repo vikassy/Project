@@ -1,7 +1,10 @@
 class GroupsController < ApplicationController
 	
   include	FriendshipHelper
+  include GeneralHelper
   include GroupsHelper
+  include EventsHelper
+
 
   def index
   	@grps = Group.where(avail: false)
