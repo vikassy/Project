@@ -1,3 +1,6 @@
+<% if signed_in? %>
+<% end %>
+<div class="xob" >
 <%= form_for(@user) do |f| %>
 <%= f.label :name, class:'input_label'%><br />
 <%= f.text_field :name, class:'input-box' %><br />
@@ -11,10 +14,10 @@
 <%= f.file_field :avatar, class:'input-box' %><br />
 <%= f.hidden_field :avatar_cache %><br />
 <% if signed_in? %> 
-<%= f.submit 'Update' %>
+<%= f.submit 'Update' , class:'input-box'%>
 <% else %>
 <span class='input_label'>I Accept</span> <%= link_to 'Terms of services' , terms_path %><%= f.check_box :terms_of_services %><br />
-<%= f.submit 'Register' , class:'input-box' %>
+<%= f.submit 'Sign Up' , class:'input-submit' %>
 <% end %>
 
 <% end %>

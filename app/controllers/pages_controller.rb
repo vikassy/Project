@@ -1,6 +1,12 @@
 class PagesController < ApplicationController
   def home
-    @title = 'Home'
+    if signed_in?
+      redirect_to overview_path(current_user)
+    else
+      @all_images = ["box-logo.jpg","rails.png","plannerace.jpg","logo.jpg"].to_json.html_safe
+      @title = 'Home'
+      @user = User.new
+    end
   end
 
   def about

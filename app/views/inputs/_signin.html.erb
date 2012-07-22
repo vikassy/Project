@@ -1,0 +1,7 @@
+<%= form_for(:sessions , url: sessions_path) do |f| %>
+<%= f.label :email, class: 'input_label_'%><br />
+<%= f.text_field :email, class:'input-box_' %><br />
+<%= f.label :password, class:'input_label_' %><br />
+<%= f.password_field :password, class:'input-box_' %><br /><br>
+<%= f.submit 'Sign in', class:'nottub' %>
+<% end %>

@@ -1,0 +1,23 @@
+<script>
+var img = <%= @all_images %>
+var basic_link = '<img alt='+'"'+'Box-logo'+'"'+' class='+'"'+' main'+'"'+' src='+'"'+'/assets/'
+var l = img.length
+var count = -1
+$('#edils').hide();
+slider();
+setInterval("slider()",4000);
+var once =1
+function slider(){
+count++;
+if (count == l) 
+count = 0 
+$('#edils').fadeIn(1000).delay(2000);
+play(count);
+}
+
+function play(num) {
+	count = num;
+	$('#edils').html(basic_link+img[num]+'"'+' />').fadeOut(1000)
+}
+
+</script>

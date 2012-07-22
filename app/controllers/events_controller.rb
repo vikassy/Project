@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 	
-	#include GroupsHelper
+	include GeneralHelper
 	include EventsHelper
 
 	def index 
@@ -8,6 +8,11 @@ class EventsController < ApplicationController
 	end
 
 	def show
+		id = params[:id].to_i
+		@all_mem = Array.new
+		for i in all_members(id,'e')
+			@all_mem << User.find(i)
+		end
 		@event = Event.find(params[:id])
 	end
 		

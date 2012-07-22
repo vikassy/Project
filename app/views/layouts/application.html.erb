@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<<<<<<< .merge_file_hVGopG
 <ul>
 <li><%= link_to 'Home' , root_path,class: 'knil' %><li>
 <li><%= link_to 'About', about_path , class: 'knil'%></li>
@@ -21,12 +22,50 @@
 <% else %>
 <li><%= link_to 'Sign up', signup_path , class: 'knil' %></li>
 <li><%= link_to 'Sign in', signin_path , class: 'knil' %></li><br />
+=======
+<%= image_tag 'logo.jpg', class: "pot"%>
+<%= image_tag 'plannerace.jpg', class: "pot"%>
+<% if signed_in? %>
+<ul class='nav_bar'>
+<li><%= link_to 'Home' , root_path ,class:'knil' %></li>
+<li><%= link_to 'My Profile' , user_path(current_user) , class:'knil'%></li>
+<li><%= link_to 'Personalize' ,edit_user_path(current_user) , class:'knil' %></li>
+<li><%= link_to 'All Users' , all_users_path , class:'knil' %></li>
+<li><%= link_to 'Sign out', signout_path , method: 'delete' , class:'knil' %></li>
+
 </ul>
+<% else %>
+<ul class='nav_bar'>
+<li><%= link_to 'Home' , root_path ,class:'knil' %></li>
+<li><%= link_to 'About', about_path , class:'knil'%></li>
+<li><%= link_to 'Help' , help_path, class:'knil' %></li>
+<li><%= link_to 'Sign up', signup_path , class:'knil' %></li>
+<li><%= link_to 'Sign in', signin_path , class:'knil' %></li>
+>>>>>>> .merge_file_snb6LF
+</ul>
+
 <% end %>
-<% flash.each do |value , message | %>
+<% flash.each do |value , message| %>
 <%= message %>
 <% end %>
+<% if signed_in? %>
+<div class='below_nav'>
 <%= yield %>
+</div>
+<% else %>
+<%= yield %>
+<% end %>
+<div class="push"></div>
+        </div>
+<div class="retoof">
+	<h1>WWW.plannerace.com</h1>
+	<ul>
+	<li><%= link_to 'Terms', root_path, class: "footer_link" %></li>
+	<li><%= link_to 'About', about_path, class: "footer_link" %></li>
+	<li><%= link_to 'Jobs', help_path, class: "footer_link" %></li>
+	<li><%= link_to 'License', signup_path, class: "footer_link" %></li> 
+	</ul>
+</div>
 
 </body>
 </html>

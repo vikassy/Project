@@ -1,1 +1,15 @@
-<%= image_tag 'box-logo.jpg' , class: 'main'%>
+<div id="edils" class="edils">
+<%= render 'slider.js.erb' %>
+<%= image_tag 'box-logo.jpg' , class: 'main' %>
+</div>
+<div id='signin_home'>
+<%= render 'inputs/signin' %>
+<p class="input_label_notaplanner">Not a Planner? .. Join now</p><%= button_to'Sign Up' , signup_path, class: "nottub_sign_up" %>
+
+</div>
+<ul class="dot_list">
+<li><%= link_to '1', '#' , id:'slider_link1' , class: 'stod' %></li>
+<li><%= link_to '2', '#' , id:'slider_link2' , class: 'stod' %></li>
+<li><%= link_to '3', '#' , id:'slider_link3' , class: 'stod' %></li>
+<li><%= link_to '4', '#' , id:'slider_link4' , class: 'stod' %></li>
+</ul>

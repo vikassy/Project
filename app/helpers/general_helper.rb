@@ -92,7 +92,7 @@ module GeneralHelper
 		if typ == 'g'
 			@grps = Group.find(id)
 			return @grps.user_id
-		else
+		else	
 			@evnt = Event.find(id)
 			return @evnt.admins_id
 		end
@@ -108,6 +108,26 @@ module GeneralHelper
 			return @evnt.invitation.include?(mem_id)
 		end
 	end
-  
+
+#To find all the members(only members) of a group or event
+
+	def all_members(id,typ)
+		if typ == 'g'
+			@grps = Group.find(id)
+			return @grps.accepted
+		else
+			@evnt = Event.find(id)
+			if @evnt.accepted
+				if @evnt.accepted[0].class == Array 
+					l = @evnt.accepted.length
+					return @evnt.accepted[1,l]
+				else
+					return @evnt.accepted
+				end
+			else
+				return []
+			end
+		end
+	end
 
 end
