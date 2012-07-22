@@ -7,6 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<<<<<<< .merge_file_NIEyab
+=======
+<<<<<<< .merge_file_hVGopG
+<ul>
+<li><%= link_to 'Home' , root_path,class: 'knil' %><li>
+<li><%= link_to 'About', about_path , class: 'knil'%></li>
+<li><%= link_to 'Help' , help_path, class: 'knil' %></li>
+<% if signed_in? %>
+<li><%= link_to 'My Profile' , user_path(current_user) , class: 'knil'%></li>
+<li><%= link_to 'Personalize' ,edit_user_path(current_user) , class: 'knil' %></li>
+<li><%= link_to 'Sign out', signout_path , method: 'delete' , class: 'knil' %></li>
+<li><%= link_to 'My overview' , overview_path(current_user), class: 'knil' %></li>
+<li><%= link_to 'All Users' , all_users_path , class: 'knil' %></li>
+<li><%= link_to 'Events', events_path , class: 'knil' %></li>
+<% else %>
+<li><%= link_to 'Sign up', signup_path , class: 'knil' %></li>
+<li><%= link_to 'Sign in', signin_path , class: 'knil' %></li><br />
+=======
+>>>>>>> .merge_file_X8o9vc
 <%= image_tag 'logo.jpg', class: "pot"%>
 <%= image_tag 'plannerace.jpg', class: "pot"%>
 <% if signed_in? %>
@@ -25,6 +44,10 @@
 <li><%= link_to 'Help' , help_path, class:'knil' %></li>
 <li><%= link_to 'Sign up', signup_path , class:'knil' %></li>
 <li><%= link_to 'Sign in', signin_path , class:'knil' %></li>
+<<<<<<< .merge_file_NIEyab
+=======
+>>>>>>> .merge_file_snb6LF
+>>>>>>> .merge_file_X8o9vc
 </ul>
 
 <% end %>
@@ -33,10 +56,17 @@
 <% end %>
 <% if signed_in? %>
 <div class='below_nav'>
+<<<<<<< .merge_file_NIEyab
 <%= yield %>
 </div>
 <% else %>
 <%= yield %>
+=======
+<%= yield %>
+</div>
+<% else %>
+<%= yield %>
+>>>>>>> .merge_file_X8o9vc
 <% end %>
 <div class="push"></div>
         </div>

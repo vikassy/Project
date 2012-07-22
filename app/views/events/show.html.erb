@@ -1,0 +1,14 @@
+<h1><%= @event.name %></h1>
+<h2><%= @event.description %></h2>
+<% if !@all_mem && !@all_mem.empty? %>
+<h3>Attending members</h3>
+<% @all_mem.each do |f| %>
+<%= link_to f.name , f %><br />
+<% end %>
+<% end %>
+<% if has_been_invited?(current_user.id,@event.id,'e') %>
+You have been invited to join this group 
+<%= button_to 'Accept' , event_path(id: @evnt.id) , method: 'put' %><%= button_to 'Decline' , event_path(id: @evnt.id) , method: :delete %><br />
+<% elsif is_member(@event.id,current_user.id,'e') %>
+Other important stuff and links pertaing to the Event !!
+<% end %>
